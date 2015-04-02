@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Project version="2G - 2.0.2" name="Demo">
+  <Target name="Demo" isCurrent="1">
+    <Device manufacturerId="9" manufacturerName="ST" chipId="261" chipName="STM32F407VG" boardId="" boardName="" coreId="4" coreName="Cortex M4"/>
+    <BuildOption>
+      <Compile>
+        <Option name="OptimizationLevel" value="0"/>
+        <Option name="UseFPU" value="0"/>
+        <Option name="UserEditCompiler" value=";"/>
+        <Option name="SupportCPlusplus" value="0"/>
+        <Option name="DEBUG" value="2"/>
+        <Option name="WARNING" value="1"/>
+        <Option name="FPU" value="0"/>
+        <Includepaths>
+          <Includepath path="."/>
+        </Includepaths>
+        <DefinedSymbols>
+          <Define name="STM32F407VG"/>
+          <Define name="STM32F407xx"/>
+        </DefinedSymbols>
+      </Compile>
+      <Link useDefault="0">
+        <Option name="DiscardUnusedSection" value="0"/>
+        <Option name="UserEditLinkder" value=""/>
+        <Option name="UseMemoryLayout" value="0"/>
+        <Option name="nostartfiles" value="0"/>
+        <Option name="LTO" value="0"/>
+        <Option name="IsNewStartupCode" value="1"/>
+        <LinkedLibraries/>
+        <MemoryAreas debugInFlashNotRAM="1">
+          <Memory name="IROM1" type="ReadOnly" size="0x00100000" startValue="0x08000000"/>
+          <Memory name="IRAM1" type="ReadWrite" size="0x00020000" startValue="0x20000000"/>
+          <Memory name="IROM2" type="ReadOnly" size="" startValue=""/>
+          <Memory name="IRAM2" type="ReadWrite" size="0x00010000" startValue="0x10000000"/>
+        </MemoryAreas>
+        <LocateLinkFile path="./stm32f407vg_flash.ld" type="0"/>
+      </Link>
+      <Output>
+        <Option name="OutputFileType" value="0"/>
+        <Option name="Path" value="./"/>
+        <Option name="Name" value="Demo"/>
+        <Option name="HEX" value="1"/>
+        <Option name="BIN" value="1"/>
+      </Output>
+      <User>
+        <UserRun name="Run#1" type="Before" checked="0" value=""/>
+        <UserRun name="Run#1" type="After" checked="0" value=""/>
+      </User>
+    </BuildOption>
+    <DebugOption>
+      <Option name="org.coocox.codebugger.gdbjtag.core.adapter" value="ST-Link"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.debugMode" value="SWD"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.clockDiv" value="1M"/>
+      <Option name="org.coocox.codebugger.gdbjtag.corerunToMain" value="1"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.jlinkgdbserver" value=""/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.userDefineGDBScript" value=""/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.targetEndianess" value="0"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.jlinkResetMode" value="Type 0: Normal"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.resetMode" value="SYSRESETREQ"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.ifSemihost" value="0"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.ifCacheRom" value="1"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.ipAddress" value="127.0.0.1"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.portNumber" value="2009"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.autoDownload" value="1"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.verify" value="1"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.downloadFuction" value="Erase Effected"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.defaultAlgorithm" value="C:\Users\user26\AppData\Roaming\CooCox\CoIDE\config\flash\CooCox-Flash\CoIDE_STM32F4xx_1024K\STM32F4xx_1024.elf"/>
+    </DebugOption>
+    <ExcludeFile/>
+  </Target>
+  <Components path="./">
+    <Component id="99" name="C_library" path="" type="BasicComponet"/>
+  </Components>
+  <LocalComponents/>
+  <Files>
+    <File name="HAL_Driver" path="" type="2"/>
+    <File name="USB/usbd_hid.c" path="components/USB_Device/Class/HID/Src/usbd_hid.c" type="1"/>
+    <File name="USB/usbd_ctlreq.h" path="components/USB_Device/Core/Inc/usbd_ctlreq.h" type="1"/>
+    <File name="HAL_Driver/stm32f4xx_hal_tim_ex.h" path="components/HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h" type="1"/>
+    <File name="HAL_Driver/stm32f4xx_hal_dma.h" path="components/HAL_Driver/Inc/stm32f4xx_hal_dma.h" type="1"/>
+    <File name="C_Library" path="" type="2"/>
+    <File name="Components/lis302dl.c" path="components/Components/lis302dl/lis302dl.c" type="1"/>
+    <File name="HAL_Driver/stm32f4xx_hal_rcc.h" path="components/HAL_Driver/Inc/stm32f4xx_hal_rcc.h" type="1"/>
+    <File name="HAL_Driver/stm32f4xx_hal_i2c.c" path="components/HAL_Driver/Src/stm32f4xx_hal_i2c.c" type="1"/>
+    <File name="HAL_Driver/stm32f4xx_ll_usb.c" path="components/HAL_Driver/Src/stm32f4xx_ll_usb.c" type="1"/>
+    <File name="BSP/stm32f4_discovery.c" path="components/BSP/stm32f4_discovery.c" type="1"/>
+    <File name="HAL_Driver/stm32f4xx_hal_gpio.c" path="components/HAL_Driver/Src/stm32f4xx_hal_gpio.c" type="1"/>
+    <File name="BSP/stm32f4_discovery_accelerometer.h" path="components/BSP/stm32f4_discovery_accelerometer.h" type="1"/>
+    <File name="CMSIS" path="" type="2"/>
+    <File name="HAL_Driver/stm32f4xx_hal_cortex.h" path="components/HAL_Driver/Inc/stm32f4xx_hal_cortex.h" type="1"/>
+    <File name="main.h" path="app/main.h" type="1"/>
+    <File name="stm32f4xx_it.c" path="app/stm32f4xx_it.c" type="1"/>
+    <File name="HAL_Driver/stm32f4xx_hal_pcd_ex.h" path="components/HAL_Driver/Inc/stm32f4xx_hal_pcd_ex.h" type="1"/>
+    <File name="HAL_Driver/stm32f4xx_hal_i2c.h" path="components/HAL_Driver/Inc/stm32f4xx_hal_i2c.h" type="1"/>
+    <File name="HAL_Driver/stm32f4xx_hal_rcc.c" path="components/HAL_Driver/Src/stm32f4xx_hal_rcc.c" type="1"/>
+    <File name="BSP" path="" type="2"/>
+    <File name="USB/usbd_ioreq.c" path="components/USB_Device/Core/Src/usbd_ioreq.c" type="1"/>
+    <File name="HAL_Driver/stm32f4xx_hal_spi.h" path="components/HAL_Driver/Inc/stm32f4xx_hal_spi.h" type="1"/>
+    <File name="HAL_Driver/stm32f4xx_hal_dma.c" path="components/HAL_Driver/Src/stm32f4xx_hal_dma.c" type="1"/>
+    <File name="CMSIS/core_cm4.h" path="components/CMSIS/Include/core_cm4.h" type="1"/>
+    <File name="usbd_conf.c" path="app/usbd_conf.c" type="1"/>
+    <File name="ffconf.h" path="app/ffconf.h" type="1"/>
+    <File name="USB" path="" type="2"/>
+    <File name="startup_stm32f407xx.s" path="app/startup_stm32f407xx.s" type="1"/>
+    <File name="HAL_Driver/stm32f4xx_hal.h" path="components/HAL_Driver/Inc/stm32f4xx_hal.h" type="1"/>
+    <File name="USB/usbd_def.h" path="components/USB_Device/Core/Inc/usbd_def.h" type="1"/>
+    <File name="usbd_conf.h" path="app/usbd_conf.h" type="1"/>
+    <File name="stm32f4xx_it.h" path="app/stm32f4xx_it.h" type="1"/>
+    <File name="C_Library/syscalls.c" path="components/coocox-master/C_library/source/syscalls.c" type="1"/>
+    <File name="HAL_Driver/stm32f4xx_hal_gpio.h" path="components/HAL_Driver/Inc/stm32f4xx_hal_gpio.h" type="1"/>
+    <File name="BSP/stm32f4_discovery_accelerometer.c" path="components/BSP/stm32f4_discovery_accelerometer.c" type="1"/>
+    <File name="HAL_Driver/stm32f4xx_hal_pcd.c" path="components/HAL_Driver/Src/stm32f4xx_hal_pcd.c" type="1"/>
+    <File name="BSP/stm32f4_discovery.h" path="components/BSP/stm32f4_discovery.h" type="1"/>
+    <File name="usbd_desc.c" path="app/usbd_desc.c" type="1"/>
+    <File name="Components/lis302dl.h" path="components/Components/lis302dl/lis302dl.h" type="1"/>
+    <File name="Components/lis3dsh.h" path="components/Components/lis3dsh/lis3dsh.h" type="1"/>
+    <File name="USB/usbd_core.h" path="components/USB_Device/Core/Inc/usbd_core.h" type="1"/>
+    <File name="HAL_Driver/stm32f4xx_hal_tim.c" path="components/HAL_Driver/Src/stm32f4xx_hal_tim.c" type="1"/>
+    <File name="CMSIS/stm32f4xx.h" path="components/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h" type="1"/>
+    <File name="Components" path="" type="2"/>
+    <File name="HAL_Driver/stm32f4xx_hal_pcd_ex.c" path="components/HAL_Driver/Src/stm32f4xx_hal_pcd_ex.c" type="1"/>
+    <File name="HAL_Driver/stm32f4xx_hal_spi.c" path="components/HAL_Driver/Src/stm32f4xx_hal_spi.c" type="1"/>
+    <File name="HAL_Driver/stm32f4xx_hal_tim_ex.c" path="components/HAL_Driver/Src/stm32f4xx_hal_tim_ex.c" type="1"/>
+    <File name="usbd_desc.h" path="app/usbd_desc.h" type="1"/>
+    <File name="HAL_Driver/stm32f4xx_hal_cortex.c" path="components/HAL_Driver/Src/stm32f4xx_hal_cortex.c" type="1"/>
+    <File name="stm32f4xx_hal_conf.h" path="app/stm32f4xx_hal_conf.h" type="1"/>
+    <File name="USB/usbd_ctlreq.c" path="components/USB_Device/Core/Src/usbd_ctlreq.c" type="1"/>
+    <File name="CMSIS/stm32f407xx.h" path="components/CMSIS/Device/ST/STM32F4xx/Include/stm32f407xx.h" type="1"/>
+    <File name="USB/usbd_hid.h" path="components/USB_Device/Class/HID/Inc/usbd_hid.h" type="1"/>
+    <File name="HAL_Driver/stm32f4xx_hal.c" path="components/HAL_Driver/Src/stm32f4xx_hal.c" type="1"/>
+    <File name="stm32f4xx_hal_msp.c" path="app/stm32f4xx_hal_msp.c" type="1"/>
+    <File name="CMSIS/system_stm32f4xx.c" path="components/CMSIS/Device/ST/STM32F4xx/Source/Templates/system_stm32f4xx.c" type="1"/>
+    <File name="HAL_Driver/stm32f4xx_hal_tim.h" path="components/HAL_Driver/Inc/stm32f4xx_hal_tim.h" type="1"/>
+    <File name="HAL_Driver/stm32f4xx_hal_pcd.h" path="components/HAL_Driver/Inc/stm32f4xx_hal_pcd.h" type="1"/>
+    <File name="HAL_Driver/stm32f4xx_ll_usb.h" path="components/HAL_Driver/Inc/stm32f4xx_ll_usb.h" type="1"/>
+    <File name="Components/lis3dsh.c" path="components/Components/lis3dsh/lis3dsh.c" type="1"/>
+    <File name="USB/usbd_ioreq.h" path="components/USB_Device/Core/Inc/usbd_ioreq.h" type="1"/>
+    <File name="USB/usbd_core.c" path="components/USB_Device/Core/Src/usbd_core.c" type="1"/>
+    <File name="main.c" path="app/main.c" type="1"/>
+  </Files>
+  <Bookmarks/>
+</Project>
